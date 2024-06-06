@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="aboutus">
+    <center><h2 style="margin-bottom: 20px;">About Us</h2></center>
+    <div class="row">
+        <div class="col-md-7">
+            <img src="{% static 'images/slide5.jpeg' %}" alt="image1" class="aboutus-img">
+        </div>
+        <div class="col-md-5">
+            <p>Radishare is a next generation digital platform which offers fingertip solutions to Corporates and Individuals (Professionals). The platform objectively promotes empowerment, efficiency, and measurable solutions to our clients.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <p>Radishare is developed and powered by Madde MD LTD for Kenya and Africa at large.</p>
+        </div>
+        <div class="col-md-7">
+            <img src="{% static 'images/slide4.jpeg' %}" alt="image2" class="aboutus-img">
+        </div>
+    </div>
+</div>
+{% endblock %}

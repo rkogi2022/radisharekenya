@@ -1,0 +1,165 @@
+/* General Website Style rules */
+body {
+    font-family: "Helvetica", Sans-Serif;
+    background-color: #1f493d !important;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+    overflow-y: auto; 
+  }
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: inherit;
+    color: white;
+    padding:0;
+    margin: 0;
+    width: 100%;
+}
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+.contact-info span {
+    margin-right: 10px;
+}
+.login-link, .home-link ,.other-links{
+    color: white;
+    text-decoration: none;
+    font-size:17px;
+    
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdownpricing {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdownpricing-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 800px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdownpricing-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownpricing-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdownpricing:hover .dropdownpricing-content {
+  display: block;
+}
+.img{
+    width: 120px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+  }
+/* footer */
+  .mainfooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(45, 40, 40);
+    color: white;
+    text-align: center;
+    margin:0;
+    padding:0;
+    height: 25px;
+ }
+
+ .mainfooter i {
+  font-size: xx-small;
+  margin-left: 2.5px;
+  float: right;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+ }
+
+.container {
+  width: 100%;
+  margin: 0;
+}
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.message-success {
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+.bottomnav{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+/* Responsive styles for screens smaller than 600px */
+@media screen and (max-width: 768px){
+  body {
+      font-size: 14px;
+  }
+
+  .container {
+      width: 100%;
+  }
+}
+
+/* Responsive styles for screens between 601px and 900px */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  body {
+      font-size: 16px;
+  }
+}
+
+/* Responsive styles for screens larger than 900px */
+@media screen and (min-width: 901px) {
+  body {
+      font-size: 18px;
+  }
+}
+

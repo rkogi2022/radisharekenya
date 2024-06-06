@@ -1,0 +1,37 @@
+<!-- Navbar -->
+{% load static %}
+<div class="navbar">
+    <div class="contact-info">
+        <a class="navbar-brand" href="{% url 'learning:index' %}">
+            <img src="{% static 'images/logo.jpg' %}" class="img">
+        </a>
+        <a href="{% url 'learning:about' %}" class="other-links">About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+            <a href="#" class="other-links">Learning</a>
+            <div class="dropdown-content">
+                <a href="#" class="other-links">Website Based</a>
+                <a href="#" class="other-links">Whatsapp Based</a>
+            </div>
+        </div> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'learning:services' %}" class="other-links">What We Do</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="dropdownpricing">
+            <a href="#" class="other-links">Pricing</a>
+            <div class="dropdownpricing-content">
+                <a href="{% url 'learning:contactus' %}" class="other-links">Development of E-Learning/Mobile learning courses based on WhatsApp, Web and USSD platforms.</a>
+                <a href="{% url 'learning:contactus' %}" class="other-links">Provision of marketing opportunity through the developed e-content/courses and platforms.</a>
+                <a href="{% url 'learning:contactus' %}" class="other-links">Brand & campaign Management and Digital Marketing.</a>
+                <a href="{% url 'learning:contactus' %}" class="other-links">Develop and conduct mini surveys on WhatsApp, & Web platforms.</a>
+                <a href="{% url 'learning:contactus' %}" class="other-links">Website Development and Management.</a>
+            </div>
+        </div> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" class="other-links">Partnerships</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" class="other-links">Jani AI</a> 
+    </div>
+    <div>
+        <a href="#" class="home-link">Log In</a> &nbsp;&nbsp;
+        <a href="#" class="login-link">Sign Up</a>
+    </div>
+</div>
+      
+
+  

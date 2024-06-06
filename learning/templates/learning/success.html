@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>File Transfer Successful</h2>
+    <p>The file transfer to {{ transfer.receiver_email }} was successful. Here are the details:</p>
+    <ul>
+        <li>Title: {{ transfer.title }}</li>
+        <li>Message: {{ transfer.message }}</li>
+        <li>Files:</li>
+        <ul>
+            {% for file in files %}
+                <li><a href="{{ file.file.url }}">{{ file.file.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </ul>
+</div>
+{% endblock %}

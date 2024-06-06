@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Verify OTP{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Verify OTP</h2>
+    <p>A verification code was sent to {{ transfer.sender_email }}. Please enter the code below to verify your file transfer.</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Verify</button>
+    </form>
+</div>
+{% endblock %}
