@@ -1,0 +1,5 @@
+ URBAN_SWAP_DB_HOST=localhost
+ URBAN_SWAP_DB_PORT=5432
+ URBAN_SWAP_DB_NAME= urban-swap-backend
+ URBAN_SWAP_DB_USER= rhyttah
+ URBAN_SWAP_DB_PASSWORD= beautiful2024

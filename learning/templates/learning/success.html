@@ -3,18 +3,28 @@
 {% block title %}Success{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h2>File Transfer Successful</h2>
-    <p>The file transfer to {{ transfer.receiver_email }} was successful. Here are the details:</p>
-    <ul>
-        <li>Title: {{ transfer.title }}</li>
-        <li>Message: {{ transfer.message }}</li>
-        <li>Files:</li>
-        <ul>
-            {% for file in files %}
-                <li><a href="{{ file.file.url }}">{{ file.file.name }}</a></li>
-            {% endfor %}
-        </ul>
-    </ul>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>File Transfer Successful</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">The file transfer to <span style="color:red;">{{ transfer.receiver_email }}</span> was successful.<br> Here are the details:</h5>
+                <p class="card-text">
+                <ul>
+                    <li><b>Title:</b> {{ transfer.title }}</li>
+                    <li><b>Message:</b> {{ transfer.message }}</li>
+                    <li><b>Files:</b></li>
+                    {% for file in files %}
+                        <a href="{{ file.file.url }}" class="btn btn-primary" style="margin: 5px; padding: 5px;">{{ file.file.name }}</a><br>
+                    {% endfor %}
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
 </div>
 {% endblock %}

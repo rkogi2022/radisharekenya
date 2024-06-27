@@ -4,23 +4,48 @@
 {% block title %}About Us{% endblock %}
 
 {% block content %}
-<div class="aboutus">
-    <center><h2 style="margin-bottom: 20px;">About Us</h2></center>
-    <div class="row">
-        <div class="col-md-7">
-            <img src="{% static 'images/slide5.jpeg' %}" alt="image1" class="aboutus-img">
+<section class="abt-section">
+    <div class="row abt-content">
+        <div class="image-card">
+            <img src="{% static 'images/slide4.jpeg' %}" alt="Image 1">
         </div>
-        <div class="col-md-5">
-            <p>Radishare is a next generation digital platform which offers fingertip solutions to Corporates and Individuals (Professionals). The platform objectively promotes empowerment, efficiency, and measurable solutions to our clients.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-5">
-            <p>Radishare is developed and powered by Madde MD LTD for Kenya and Africa at large.</p>
-        </div>
-        <div class="col-md-7">
-            <img src="{% static 'images/slide4.jpeg' %}" alt="image2" class="aboutus-img">
+        <div class="abt-card">
+            <h2>About Us</h2>
+            <p>Radishare is a next-generation digital platform which offers fingertip solutions to Corporates and Individuals (Professionals). The platform objectively promotes empowerment, efficiency, and measurable solutions to our clients. Radishare is developed and powered by Madde MD LTD for Kenya and Africa at large.</p>
         </div>
     </div>
-</div>
+</section>
+
+<section class="abt-section" style="margin-bottom: 20px;">
+    <div class="abt-content">
+        <div class="abt-card">
+            <h2>Madde MD LTD</h2>
+            <p>Madde MD LTD (MD Limited) is a regional advisory, management & consulting, capacity building and investment firm that provides solutions in the health, research, climate change, human resource, finance, marketing, and technology/digital sectors. Madde MD boasts of working with over 200 private institutions, various county governments, and development partners across Kenya. MD Limited draws her success from a pool of experienced and talented professionals from both private and public sectors. The firm is driven by its mission to support clients grow sustainable investments and competitive businesses while at the same time responding to societal needs.</p>
+        </div>
+        <div class="image-card">
+            <img src="{% static 'images/slide5.jpeg' %}" alt="Image 2">
+        </div>
+    </div>
+</section>
+
+<section class="cards-section">
+    <div class="abtcard">
+        <h2>Vision</h2>
+        <p>To be the leader in creating and sustaining positive impact in the Digital lense era and Climate Change in Africa.</p>
+    </div>
+    <div class="abtcard">
+        <h2>Mission</h2>
+        <p>To develop and improve digital solutions which offers fingertip solutions to Corporated and Proffessionals </p>
+    </div>
+    <div class="abtcard">
+        <h2>Core Values</h2>
+        <ul>
+            <li>Integrity</li>
+            <li>Innovation</li>
+            <li>Insightful</li>
+            <li>Inquisitive</li>
+            <li>Measurable</li>
+        </ul>
+    </div>
+</section>
 {% endblock %}

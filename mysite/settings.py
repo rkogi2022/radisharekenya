@@ -105,15 +105,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Email configuration
-# settings.py
 
+# Email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your-email@gmail.com'
-EMAIL_HOST_PASSWORD = 'your-email-password'
+EMAIL_HOST = 'lookuhub.co.ke'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True  # Use SSL
+EMAIL_USE_TLS = False  # Don't use TLS since we're using SSL
+EMAIL_HOST_USER = 'customercare@lookuhub.co.ke'
+EMAIL_HOST_PASSWORD = 'looku123@A2!'
+DEFAULT_FROM_EMAIL = 'customercare@lookuhub.co.ke'
+
 
 
 

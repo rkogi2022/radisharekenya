@@ -29,8 +29,8 @@
                         {{ form.message }}
                     </div>
                     <div class="form-group">
-                        {{ form.files.label_tag }}
-                        {{ form.files }}
+                        <label for="id_files">Files:</label>
+                        <input type="file" name="files" id="id_files" multiple>
                     </div>
                     <center><button type="submit" class="btn btn-primary">Transfer</button></center>
                 </form>
@@ -41,14 +41,14 @@
     <div class="col-md-4">
         <div class="card">
             <div class="card-body">
-                <h5>COMING SOON!!!</h5>
+                <img src="{% static 'images/comingsoon.jpg' %}" class="comingsoon-img">
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card">
             <div class="card-body">
-                <h5>COMING SOON!!!</h5>
+                <img src="{% static 'images/comingsoon.jpg' %}" class="comingsoon-img">
             </div>
         </div>
     </div>
@@ -92,28 +92,44 @@
 <br>
 
 <div class="row bottomnav">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <center>
-            <h2 style="color: rgb(138, 190, 36); margin-top: 10px;">Powered & Supported By:</h2>
+            <h2 style="color: rgb(30, 40, 10); margin-top: 10px;">Contact Us:</h2>
+            <p>Radishare Kenya</p>
+            <p>E-mail : radishare00@gmail.com</p>
+            <p>Phone : 0784 515955 / 0734 743429</p>
+        </center>
+    </div>
+    <div class="col-md-4">
+        <div style="margin-bottom:5px">
+            <center>
+                <h2 style="color:rgb(30, 40, 10); margin-top: 10px;">Follow-Us:</h2>
+                <div class="col-md-6">
+                    <p style="margin-left: 30px;"><a href="https://x.com/radishare?t=GG27Kwg6uUhu-_UTGYp69g&s=09">
+                        <span class="fa fa-twitter" style="color: rgb(28, 157, 238); font-size: xx-large;"></span>
+                    </a></p>
+                    <p style="margin-left: 30px;">
+                        <a href="https://www.facebook.com/RadishareKenya">
+                            <span class="fa fa-facebook" style="color: rgb(0, 119, 255); font-size: xx-large;"></span></a></p>
+                </div>
+                <div class="col-md-6">
+                    <p style="margin-left: 30px;"><a href="https://www.linkedin.com/company/radishare-kenya/">
+                        <span class="fa fa-linkedin" style="color: rgb(28, 157, 238); font-size: xx-large;"></span>
+                    </a></p>
+                <p style="margin-left: 30px;"><a href="https://www.instagram.com/radishare?igsh=Z2tqZGYwcTh4cHRw">
+                    <span class="fa fa-instagram" style="color: rgb(209, 60, 60); font-size: xx-large;"></span></a></p>
+                </div>
+                
+            </center>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <center>
+            <h2 style="color: rgb(30, 40, 10); margin-top: 10px;">Powered & Supported By:</h2>
             <p>Madde MD LTD (MD Limited)</p>
             <p>Website : www.maddemd.co.ke</p>
             <p>E-mail : directorsoffice@maddemd.co.ke</p>
         </center>
-    </div>
-    <div class="col-md-6">
-        <div style="margin-bottom:5px">
-            <center>
-                <h2 style="color:rgb(138, 190, 36);; margin-top: 10px;">Follow-Us</h2>
-                <p style="margin-left: 30px;"><a href="https://x.com/radishare?t=GG27Kwg6uUhu-_UTGYp69g&s=09">
-                    <span class="fa fa-twitter" style="color: rgb(28, 157, 238); font-size: xx-large;"></span>
-                </a></p>
-                <p style="margin-left: 30px;">
-                    <a href="https://www.facebook.com/RadishareKenya">
-                        <span class="fa fa-facebook" style="color: rgb(0, 119, 255); font-size: xx-large;"></span></a></p>
-                <p style="margin-left: 30px;"><a href="https://www.instagram.com/radishare?igsh=Z2tqZGYwcTh4cHRw">
-                    <span class="fa fa-instagram" style="color: rgb(209, 60, 60); font-size: xx-large;"></span></a></p>
-            </center>
-        </div>
     </div>
 </div>
 

@@ -1,3 +1,4 @@
+/* index page css */
 .coursecard{
     margin-top: 5px;
     margin-bottom: 15px;
@@ -43,16 +44,11 @@
     margin-left: 30px;
     margin-right: 30px;
   }
-  .aboutus{
-    color: white;
-    overflow-x: scroll;
-  }
-  .aboutus-img{
-    width: 700px;
-    height: 550px;
-    margin-bottom: 40px;
-  }
-/* Ensure this is added to your CSS file or within a <style> tag in your base template */
+.comingsoon-img{
+  width: 350px;
+  height:708px;
+}
+  /* contact-us page css */
 
 .core-values {
   display: flex;
@@ -127,4 +123,175 @@ input, textarea {
 
 .subbutton:hover {
   background-color: #0056b3;
+}
+
+/* abt us page css */
+
+.abt-section {
+  position: relative;
+  min-height: 70vh;
+  width: 100%;
+  background: url('about-bg.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.abt-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; /* Reduced gap */
+  flex-wrap: wrap;
+}
+
+.image-card {
+  width: 45%;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.abt-card {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  text-align: left;
+}
+
+.abt-card h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.abt-card p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.cards-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 50px 20px;
+  background: white;
+  flex-wrap: wrap;
+}
+
+.abtcard {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.abtcard h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.abtcard p, .abtcard ul {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #666;
+}
+
+.abtcard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.abtcard li {
+  margin: 10px 0;
+}
+
+/* what we do page css */
+
+header {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.grid-section {
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.grid-item h5 {
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: rgb(246, 88, 88);
+}
+
+.services-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-item {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.service-item p {
+  margin: 0;
+  font-size: 1.1em;
+  line-height: 1.6;
 }

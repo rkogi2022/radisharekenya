@@ -4,24 +4,76 @@
 {% block title %}What We Do{% endblock %}
 
 {% block content %}
-<div class="row services-details">
-    <div class="core-values col-md-5">
-        <h4>Core Values</h4>
-        <ul>
-            <li>Integrity</li>
-            <li>Innovation</li>
-            <li>Insightful</li>
-            <li>Measurable</li>
-        </ul>
-    </div>
-    <div class="col-md-7">
+    <header class="header">
+        <h2>Practice Area</h2>
+    </header>
+
+    <section class="grid-section">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="{% static 'images/online-course.png' %}" alt="Image 1" >
+                <h5 >E-Learning</h5>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/climate-change.png' %}" alt="Image 2">
+                <h5>Climate Change</h5>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/prestige.png' %}" alt="Image 3">
+                <h5>Brand Management</h5>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/social-media.png' %}" alt="Image 4">
+                <h5>Digital Marketing</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-section">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="{% static 'images/analytics.png' %}" alt="Image 5">
+                <h5>Research</h5>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/communication.png' %}" alt="Image 6">
+                <h5>ICT</h5>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/support.png' %}" alt="Image 7">
+                <h5>Corporate Tools</h5>
+            </div>
+            <div class="grid-item">
+                <img src="{% static 'images/consultation.png' %}" alt="Image 8">
+                <h5>Consultancy</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
         <h2>Our Services</h2>
-        <h5>1. Develop E-Learning/Mobile learning courses based on WhatsApp, Web and USSD platforms.</h5>
-        <h5>2. Provide a marketing opportunity through the developed e-content/courses and platforms.</h5>
-        <h5>3. Brand & campaign Management and Digital Marketing.</h5>
-        <h5>4. Develop and conduct mini surveys on WhatsApp, & Web platforms.</h5>
-        <h5>5. Website Development and Management.</h5>
-        <h5>6. Sending and receiving files for free on Radishare platform </h5>
-    </div>
-</div>
+        <div class="services-container">
+            <div class="service-item">
+                <p>Develop E-Learning/Mobile learning courses based on WhatsApp, Web and USSD platforms.</p>
+            </div>
+            <div class="service-item">
+                <p>Provide a marketing opportunity through the developed e-content/courses and platforms.</p>
+            </div>
+            <div class="service-item">
+                <p>Brand & Campaign Management and Digital Marketing.</p>
+            </div>
+            <div class="service-item">
+                <p>Develop and conduct mini surveys on WhatsApp, & Web platforms.</p>
+            </div>
+            <div class="service-item">
+                <p>Website Development and Management.</p>
+            </div>
+            <div class="service-item">
+                <p>Sending and receiving files for free on Radishare platform.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
 {% endblock %}

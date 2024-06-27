@@ -18,7 +18,9 @@ body {
     padding:0;
     margin: 0;
     width: 100%;
+    z-index: 1000;
 }
+
 .contact-info {
     display: flex;
     align-items: center;
@@ -134,7 +136,8 @@ body {
   color: #4CAF50;
 }
 .bottomnav{
-    color: white;
+  background-color: #ddd;
+    color: black;
     margin-top: 10px;
     margin-bottom: 35px;
 }

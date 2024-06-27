@@ -18,14 +18,9 @@ class FileTransferForm(forms.ModelForm):
         label='Message',
         widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Message', 'rows': 3})
     )
-    files = forms.FileField(
-    label='Upload File',
-    widget=forms.ClearableFileInput(attrs={'class': 'form-control'}),
-    required=True
-    )
     class Meta:
         model = FileTransfer
-        fields = ['sender_email', 'receiver_email', 'title', 'message', 'files']
+        fields = ['sender_email', 'receiver_email', 'title', 'message']
 
 class OTPForm(forms.Form):
     otp = forms.CharField(

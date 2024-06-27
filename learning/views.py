@@ -1,12 +1,19 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.core.mail import send_mail
+from django.core.mail import send_mail, BadHeaderError
 from django.contrib import messages
 from .forms import FileTransferForm, OTPForm, ContactForm
 from .models import FileTransfer, FileTransferFile
 import random
+import logging
+from django.urls import reverse
+from django.utils.http import urlsafe_base64_encode
+from django.utils.encoding import force_bytes
+
 
 def generate_otp():
     return ''.join([str(random.randint(0, 9)) for _ in range(6)])
+
+logger = logging.getLogger(__name__)
 
 def Index(request):
     if request.method == 'POST':
@@ -18,15 +25,21 @@ def Index(request):
             transfer.save()
             for f in files:
                 FileTransferFile.objects.create(transfer=transfer, file=f)
-            send_mail(
-                'Your verification code',
-                f'Your verification code is {transfer.otp}',
-                'from@example.com',
-                [transfer.sender_email],
-                fail_silently=False,
-            )
-            messages.info(request, 'Verification code sent to your email.')
-            return redirect('verify', transfer_id=transfer.id)
+            try:
+                send_mail(
+                    'Your verification code',
+                    f'Your verification code is {transfer.otp}',
+                    'customercare@lookuhub.co.ke',
+                    [transfer.sender_email],
+                    fail_silently=False,
+                )
+                messages.info(request, 'Verification code sent to your email.')
+            except BadHeaderError:
+                messages.error(request, 'Invalid header found.')
+            except Exception as e:
+                logger.error(f'Error sending email: {e}')
+                messages.error(request, 'Error sending verification code. Please try again later.')
+            return redirect('learning:verify', transfer_id=transfer.id)
     else:
         form = FileTransferForm()
     return render(request, 'learning/index.html', {'form': form})
@@ -39,13 +52,39 @@ def verify(request, transfer_id):
             if form.cleaned_data['otp'] == transfer.otp:
                 transfer.is_verified = True
                 transfer.save()
+
+                # Generate a link to the files for the receiver
+                file_links = [
+                    request.build_absolute_uri(file.file.url) for file in FileTransferFile.objects.filter(transfer=transfer)
+                ]
+                file_links_str = '\n'.join(file_links)
+
+                try:
+                    # Send email to the receiver
+                    send_mail(
+                        'You have received files',
+                        f'You have received files from {transfer.sender_email}.\n\n'
+                        f'Title: {transfer.title}\n'
+                        f'Message: {transfer.message}\n\n'
+                        f'Here are the links to download the files:\n{file_links_str}',
+                        'customercare@lookuhub.co.ke',
+                        [transfer.receiver_email],
+                        fail_silently=False,
+                    )
+                except BadHeaderError:
+                    messages.error(request, 'Invalid header found in email to receiver.')
+                except Exception as e:
+                    logger.error(f'Error sending email to receiver: {e}')
+                    messages.error(request, 'Error sending email to receiver. Please try again later.')
+
                 messages.success(request, 'Verification successful. File transferred.')
-                return redirect('success', transfer_id=transfer.id)
+                return redirect('learning:success', transfer_id=transfer.id)
             else:
                 messages.error(request, 'Invalid verification code.')
     else:
         form = OTPForm()
     return render(request, 'learning/verify.html', {'form': form, 'transfer': transfer})
+
 
 def success(request, transfer_id):
     transfer = get_object_or_404(FileTransfer, id=transfer_id)
@@ -83,3 +122,13 @@ def contact_view(request):
     else:
         form = ContactForm()
     return render(request, 'learning/contactus.html', {'form': form})
+
+def jani(request):
+    template='learning/jani.html'
+    context={}
+    return render(request,template, context)
+
+def partners(request):
+    template='learning/partnership.html'
+    context={}
+    return render(request,template, context)
