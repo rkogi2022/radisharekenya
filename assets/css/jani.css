@@ -51,7 +51,7 @@
 }
 /* partnership page css */
 header {
-    color: white;
+    color: black;
     padding: 10px 0;
     text-align: center;
 }
@@ -63,7 +63,6 @@ h1, h2, h3 {
 
 .partnership-section {
     padding: 20px;
-    background-color: #fff;
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }

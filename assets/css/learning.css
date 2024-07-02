@@ -46,7 +46,7 @@
   }
 .comingsoon-img{
   width: 350px;
-  height:708px;
+  height:650px;
 }
   /* contact-us page css */
 
@@ -183,7 +183,6 @@ input, textarea {
   justify-content: space-around;
   align-items: stretch;
   padding: 50px 20px;
-  background: white;
   flex-wrap: wrap;
 }
 
@@ -199,8 +198,8 @@ input, textarea {
   text-align: center;
 }
 
-.abtcard h2 {
-  font-size: 1.8em;
+.abtcard h4 {
+  font-size: 2em;
   margin-bottom: 20px;
   color: #333;
 }

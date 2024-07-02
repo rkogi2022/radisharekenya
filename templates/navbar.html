@@ -1,19 +1,20 @@
-<!-- Navbar -->
 {% load static %}
 <div class="navbar">
-    <div class="contact-info">
+    <div class="logo">
         <a class="navbar-brand" href="{% url 'learning:index' %}">
-            <img src="{% static 'images/logo.jpg' %}" class="img">
+            <img src="{% static 'images/radilogo.png' %}" class="img">
         </a>
-        <a href="{% url 'learning:about' %}" class="other-links">About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="center-links">
+        <a href="{% url 'learning:about' %}" class="other-links">About Us</a>
         <div class="dropdown">
             <a href="#" class="other-links">Learning</a>
             <div class="dropdown-content">
                 <a href="#" class="other-links">Website Based</a>
                 <a href="https://wa.me/254784515955" class="other-links">Whatsapp Based</a>
             </div>
-        </div> &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="{% url 'learning:services' %}" class="other-links">What We Do</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <a href="{% url 'learning:services' %}" class="other-links">What We Do</a>
         <div class="dropdownpricing">
             <a href="#" class="other-links">Pricing</a>
             <div class="dropdownpricing-content">
@@ -23,15 +24,12 @@
                 <a href="{% url 'learning:contactus' %}" class="other-links">Develop and conduct mini surveys on WhatsApp, & Web platforms.</a>
                 <a href="{% url 'learning:contactus' %}" class="other-links">Website Development and Management.</a>
             </div>
-        </div> &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="{% url 'learning:partners' %}" class="other-links">Partnerships</a> &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="{% url 'learning:jani' %}" class="other-links">Jani AI</a> 
+        </div>
+        <a href="{% url 'learning:partners' %}" class="other-links">Partnerships</a>
+        <a href="{% url 'learning:jani' %}" class="other-links">Jani AI</a>
     </div>
-    <div>
-        <a href="#" class="home-link">Log In</a> &nbsp;&nbsp;
+    <div class="auth-links">
+        <a href="#" class="home-link">Log In</a>
         <a href="#" class="login-link">Sign Up</a>
     </div>
 </div>
-      
-
-  

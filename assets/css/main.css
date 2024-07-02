@@ -1,45 +1,77 @@
 /* General Website Style rules */
+@font-face {
+  font-family: 'MADE TOMMY';
+  src: url('/static/fonts/MADE TOMMY Light_PERSONAL USE.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-    font-family: "Helvetica", Sans-Serif;
-    background-color: #1f493d !important;
-    color: #333;
+    font-family: 'MADE TOMMY', sans-serif !important;
+    font-size: 12px !important;
+    background-color: #F9F1E4 !important;
+    color: #292A2D;
     margin: 0;
     padding: 0;
     height: 80%;
     overflow-y: auto; 
   }
   /* Navbar styles */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: inherit;
-    color: white;
-    padding:0;
-    margin: 0;
-    width: 100%;
-    z-index: 1000;
+  /* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+  color: black;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.center-links {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between center links as needed */
+}
+
+.auth-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between auth links as needed */
 }
 
 .contact-info {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
+
 .contact-info span {
-    margin-right: 10px;
+  margin-right: 10px;
 }
-.login-link, .home-link ,.other-links{
-    color: white;
-    text-decoration: none;
-    font-size:17px;
-    
+
+.login-link, .home-link, .other-links {
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
 }
-.dropdown {
+
+.dropdown, .dropdownpricing {
   position: relative;
   display: inline-block;
 }
 
-.dropdown-content {
+.dropdown-content, .dropdownpricing-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -48,62 +80,39 @@ body {
   z-index: 1;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.dropdownpricing {
-  position: relative;
-  display: inline-block;
-  
-}
-
 .dropdownpricing-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
   min-width: 800px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
-.dropdownpricing-content a {
+.dropdown-content a, .dropdownpricing-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdownpricing-content a:hover {
+.dropdown-content a:hover, .dropdownpricing-content a:hover {
   background-color: #f1f1f1;
 }
 
-.dropdownpricing:hover .dropdownpricing-content {
+.dropdown:hover .dropdown-content, .dropdownpricing:hover .dropdownpricing-content {
   display: block;
 }
-.img{
-    width: 120px;
-    height: 60px;
-    margin: 0;
-    padding: 0;
-  }
+
+.img {
+  width: 150px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+}
+
 /* footer */
   .mainfooter {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(45, 40, 40);
+    background-color: #1f493d;
     color: white;
     text-align: center;
     margin:0;
