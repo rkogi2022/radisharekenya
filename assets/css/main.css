@@ -112,7 +112,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #1f493d;
+    background-color: #1f493d !important;
     color: white;
     text-align: center;
     margin:0;
@@ -145,11 +145,28 @@ body {
   color: #4CAF50;
 }
 .bottomnav{
-  background-color: #ddd;
-    color: black;
+  background-color: #1f493d;
+    color: white;
     margin-top: 10px;
-    margin-bottom: 35px;
 }
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between icons as needed */
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 50px; /* Adjust width to your preference */
+  text-align: center;
+  margin: 5px 10px; /* Adjust margins as needed */
+}
+
+.social-icons a:nth-child(odd) {
+  clear: both;
+}
+
 /* Responsive styles for screens smaller than 600px */
 @media screen and (max-width: 768px){
   body {

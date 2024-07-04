@@ -16,7 +16,7 @@ class FileTransferForm(forms.ModelForm):
     )
     message = forms.CharField(
         label='Message',
-        widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Message', 'rows': 3})
+        widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Message', 'rows': 2})
     )
     class Meta:
         model = FileTransfer
