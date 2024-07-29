@@ -1,14 +1,13 @@
-{% extends 'base.html' %}
-{% load static %}
 
-{% block title %}About Us{% endblock %}
+{% extends 'base.html' %}
+
+{% block title %}Pricing{% endblock %}
 
 {% block content %}
-
-<div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-8">
-        <div class="form-container">
+<div class="row otp-verify">
+    <div class="col-md-3"></div>
+    <div class="col-md-5"  style="margin-top: 80px; margin-left: 150px;">
+        <div class="container">
             <h6 style="color: white;">Please give a brief of the services needed *</h6>
             <form method="post" novalidate>
                 {% csrf_token %}
@@ -25,6 +24,6 @@
             </form>
         </div>
     </div>
+    <div class="col-md-4"></div>
 </div>
-
 {% endblock %}
