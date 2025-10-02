@@ -15,8 +15,7 @@ body {
     height: 80%;
     overflow-y: auto; 
   }
-  /* Navbar styles */
-  /* Navbar styles */
+/* General Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -51,21 +50,47 @@ body {
   gap: 10px; /* Adjust spacing between auth links as needed */
 }
 
-.contact-info {
-  display: flex;
-  align-items: center;
+/* Hamburger Icon (Only visible on small screens) */
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 
-.contact-info span {
-  margin-right: 10px;
+/* Show Hamburger on Small Screens */
+@media screen and (max-width: 768px) {
+  .hamburger {
+      display: block;
+      font-size: 24px;
+  }
+
+  /* Hide the Navbar items by default on small screens */
+  .center-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #fff;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 20px;
+  }
+
+  .auth-links {
+      display: none;
+  }
+
+  .navbar.active .center-links {
+      display: flex;
+  }
+
+  /* Make dropdown links smaller on small screens */
+  .dropdown-content a,
+  .dropdownpricing-content a {
+      font-size: 14px; /* Make links smaller on small screens */
+  }
 }
 
-.login-link, .home-link, .other-links {
-  color: black;
-  text-decoration: none;
-  font-size: 17px;
-}
-
+/* Navbar Dropdowns */
 .dropdown, .dropdownpricing {
   position: relative;
   display: inline-block;
@@ -98,6 +123,32 @@ body {
 .dropdown:hover .dropdown-content, .dropdownpricing:hover .dropdownpricing-content {
   display: block;
 }
+
+.donate-img {
+  width: 100px;   /* adjust size */
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.donate-img:hover {
+  transform: scale(1.1); /* hover effect */
+}
+
+/* General Styles for Navbar Links */
+.login-link, .home-link, .other-links {
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.img {
+  width: 150px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+}
+
 
 .img {
   width: 150px;

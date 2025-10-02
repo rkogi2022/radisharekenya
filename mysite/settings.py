@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'import_export',
     'learning',
+    'core_auth',
     'django.core.mail',
 
 

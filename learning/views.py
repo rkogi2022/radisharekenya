@@ -9,6 +9,10 @@ from django.urls import reverse
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 
+def home(request):
+    template='learning/home.html'
+    context={}
+    return render(request,template, context)
 
 def generate_otp():
     return ''.join([str(random.randint(0, 9)) for _ in range(6)])
@@ -128,7 +132,30 @@ def jani(request):
     context={}
     return render(request,template, context)
 
+def cbos(request):
+    template='learning/cbo.html'
+    context={}
+    return render(request,template, context)
+
 def partners(request):
     template='learning/partnership.html'
     context={}
     return render(request,template, context)
+
+def corporate(request):
+    template='learning/home.html'
+    context={}
+    return render(request,template, context)
+
+def privacy(request):
+    template='learning/privacy.html'
+    context={}
+    return render(request,template, context)
+
+def disclaimer(request):
+    template='learning/disclaimer.html'
+    context={}
+    return render(request,template, context)
+
+def small_screen_view(request):
+    return render(request, 'learning/small_screen.html')

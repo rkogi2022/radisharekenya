@@ -1,4 +1,4 @@
-/* jani ai page css */
+/* General Styles */
 .janibody {
     margin: 0;
     padding: 0;
@@ -12,6 +12,7 @@
     position: relative;
     height: 100vh;
     width: 100%;
+    margin-top: 10px;
     background: url('../images/jani.jpg') no-repeat center center/cover;
 }
 
@@ -23,6 +24,7 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
 }
+
 .janicontent {
     position: relative;
     z-index: 1;
@@ -48,10 +50,11 @@
     font-size: 1.2em;
     line-height: 1.6;
 }
-/* partnership page css */
+
+/* Partnership Page CSS */
 header {
     color: black;
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
 }
 
@@ -80,7 +83,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* looku part in partnership page css */
+/* Looku Part in Partnership Page CSS */
 .lookubody {
     margin: 0;
     padding: 0;
@@ -104,16 +107,17 @@ header {
     height: 100%;
     width: 100%;
 }
+
 .lookucontent {
     position: relative;
     z-index: 1;
     color: white;
     text-align: justify;
     top: 50%;
-    left: 48%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 680px;
+    max-width: 600px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -129,8 +133,7 @@ header {
     line-height: 1.6;
 }
 
-
-/* jani part in partnership page css */
+/* Jani Part in Partnership Page CSS */
 .janipartbody {
     margin: 0;
     padding: 0;
@@ -154,6 +157,7 @@ header {
     height: 100%;
     width: 100%;
 }
+
 .janipartcontent {
     position: relative;
     z-index: 1;
@@ -177,4 +181,164 @@ header {
 .janipartcontent p {
     font-size: 1.2em;
     line-height: 1.6;
+}
+
+/* Style for the Request Button Container */
+.request-button-container {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+/* Style for the Link Around the Button */
+.request-button-link {
+    float: right;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.request-button-container .btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hover Effect for the Button */
+.request-button-container .btn:hover {
+    background-color: #218838;
+    transition: background-color 0.3s ease;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    /* Jani AI Section */
+    .janiabout-section {
+        background-position: center top; /* Ensure the image stays fixed during scroll */
+        background-size: cover;
+        padding-bottom: 20px; /* Add space to prevent overlap */
+        margin-bottom: 30px; /* Space after the section to prevent overlap */
+    }
+
+    .janicontent {
+        width: 90%;
+        max-width: 1800px;
+        padding: 15px;
+        text-align: center;
+        top: 5%; /* Adjust content positioning */
+        left: 50%;
+        bottom: 1000px;
+        transform: translateX(-50%);
+    }
+
+    .janicontent h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .janicontent p {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+    /* Logos Section */
+    .logos-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .logos-container img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Looku Section */
+    .lookuabout-section {
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .lookucontent {
+        width: 90%;
+        max-width: none;
+        padding: 15px;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .lookucontent h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .lookucontent p {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+    /* Jani Part in Partnership Section */
+    .janipartabout-section {
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .janipartcontent {
+        width: 90%;
+        max-width: none;
+        padding: 15px;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .janipartcontent h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .janipartcontent p {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+    /* Request Button Container */
+    .request-button-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .request-button-container .btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+.latest-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.latest-posts > div {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Responsive styling for phone screens */
+@media (max-width: 768px) {
+    .latest-posts {
+        flex-direction: column;
+        margin-top: 300px;
+    }
+
+    .latest-posts > div {
+        width: 100%;
+    }
 }

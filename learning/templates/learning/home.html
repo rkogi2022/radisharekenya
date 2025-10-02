@@ -1,0 +1,499 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+<style>
+    /* Whole row centered with space */
+.stats-row {
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* Numbers */
+.stat-number {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: green;
+  margin: 0;
+}
+
+/* Labels */
+.stat-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  color: #8e44ad;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Flag image */
+.flag-img {
+  height: 30px;
+  margin-left: 5px;
+}
+/* Container row */
+.flag-row {
+  display: flex;
+  justify-content: space-between;  /* distribute across row */
+  align-items: center;
+  flex-wrap: nowrap;               /* keep in one line */
+  gap: 20px;                       /* space between items */
+  margin: 20px auto;
+}
+
+.flag-box {
+  flex: 1;                         /* equal width */
+  max-width: 22%;                  /* ensure 4 fit side by side */
+  text-align: center;
+}
+
+/* Title Styling */
+h2.section-title {
+  text-align: center;                   /* center horizontally */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  color: #8e44ad;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Underline effect */
+h2.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;                         /* length of underline */
+  height: 4px;                          /* thickness */
+  background-color: orange;             /* underline color */
+  margin: 10px auto 0;                  /* centered underline */
+  border-radius: 2px;
+}
+/* Program name */
+.stat-flagship {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  font-weight: 1200;
+  color: orange;
+  margin: 0;
+}
+
+/* Flag images */
+.flagship-img {
+  width: 350px;          
+  height: 300px;         
+  border-radius: 12px;   
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+  transition: transform 0.3s ease;   
+}
+
+.flagship-img:hover {
+  transform: scale(1.1);  /* zoom on hover */
+}
+
+
+  .arrow-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* fit content instead of full width */
+    justify-content: center; /* center the whole grid */
+    gap: 60px; /* spacing between items */
+    margin: 60px auto;
+  }
+
+  .arrow-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #a569bd;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 25px 60px;
+    position: relative;
+    text-decoration: none;
+    border-radius: 6px 0 0 6px;
+    white-space: nowrap;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .arrow-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px; /* arrow width */
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid #a569bd;
+  }
+
+  .arrow-box:hover {
+    background: #8e44ad;
+    transform: scale(1.05);
+  }
+
+  .arrow-box:hover::after {
+    border-left-color: #8e44ad;
+  }
+</style>
+    <div class="row"><div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'images/b1.png' %}" class="d-block w-100" alt="First slide">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'images/b2.png' %}" class="d-block w-100" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/b3.png' %}" class="d-block w-100" alt="Third slide">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="homebg-image">
+<div class="row">
+    <section class="abt-section">
+    <div class="abt-content">
+        <div class="image-card">
+            <div class="overlay">
+                <p style="font-size: x-large;">EMPOWERING ORGANISATIONS & <br> PROFESSIONALS WITH NEXT-GENERATION <br> DIGITAL SOLUTIONS</p>
+                <p style="font-size: xx-large; color: rgb(236, 176, 49);">MEASURABLE.  EFFICIENT.  IMPACTFUL.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+</div>
+
+<div class="row">
+    <section class="abt-section">
+    <div class="abt-content">
+        <div class="image-card">
+            <div class="overlay">
+                <p style="font-size: x-large;">Radishare Kenya is a next-generation digital firm built to empower grassroots 
+                    organizations, MSMEs, and professionals with smart, measurable solutions. We combine strategy, technology, 
+                    and mentorship to fuel sustainable growth and community impact. From local CBOs to emerging enterprises, 
+                    Radishare Kenya delivers bold, fingertip-ready tools that turn ambition into action. Looking for strategic 
+                    direction or tailored solutions? Partner with our expert consultancy team to unlock your full potential..</p>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+</div>
+
+<div class="row text-center stats-row">
+    <div class="col-md-3 stat-box">
+        <p class="stat-number">19 <img src="{% static 'images/flag.jpg' %}" class="flag-img" alt="flag"></p>
+        <p class="stat-text">Counties <br> worked in</p>
+    </div>
+    <div class="col-md-3 stat-box">
+        <p class="stat-number">500 +</p>
+        <p class="stat-text">People Empowered</p>
+    </div>
+    <div class="col-md-3 stat-box">
+        <p class="stat-number">30 +</p>
+        <p class="stat-text">CBOs Mentored</p>
+    </div>
+    <div class="col-md-3 stat-box">
+        <p class="stat-number">40 +</p>
+        <p class="stat-text">MSME's Service <br> Provided</p>
+    </div>
+</div>
+
+ 
+<h2 class="section-title">Flag Initiatives</h2>
+<div class="flag-row">
+    <!-- CBO Mentorship -->
+    <div class="flag-box">
+        <p class="stat-flagship">CBO Mentorship <br> Program</p>
+        <img src="{% static 'images/cbonetwork.png' %}" class="flagship-img" alt="flag"
+             data-bs-toggle="modal" data-bs-target="#cboModal">
+    </div>
+
+    <!-- MSME -->
+    <div class="flag-box">
+        <p class="stat-flagship">MSME Empowerment <br> Program</p>
+        <img src="{% static 'images/msme.jpg' %}" class="flagship-img" alt="flag"
+             data-bs-toggle="modal" data-bs-target="#msmeModal">
+    </div>
+
+    <!-- Jani AI -->
+    <div class="flag-box">
+        <p class="stat-flagship">Jani AI <br> Kenya</p>
+        <img src="{% static 'images/hatua.jpeg' %}" class="flagship-img" alt="flag"
+             data-bs-toggle="modal" data-bs-target="#janiModal">
+    </div>
+
+    <!-- Consultancy -->
+    <div class="flag-box">
+        <p class="stat-flagship">Consultancy <br> Services</p>
+        <img src="{% static 'images/consultancy.png' %}" class="flagship-img" alt="flag"
+             data-bs-toggle="modal" data-bs-target="#consultModal">
+    </div>
+</div>
+
+<!-- CBO Mentorship Modal -->
+<div class="modal fade" id="cboModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">CBO Mentorship Program</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-style: italic;">Building stronger CBOs for lasting community impact.</p>
+        <p>Radishare’s CBO Mentorship Program equips community-based organizations with the skills,
+             networks, and tools they need to scale their impact. Through tailored mentorship, 
+             digital learning, and expert sessions, CBO leaders strengthen their governance, fundraising, 
+             and advocacy capacity enabling them to deliver sustainable solutions in health, climate action,
+             and social development.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MSME Modal -->
+<div class="modal fade" id="msmeModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">MSME Empowerment Program</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-style: italic;">Fueling small businesses to grow, compete, and thrive.</p>
+        <p>Our MSME Empowerment Program supports small and medium enterprises to thrive 
+            in a fast-changing economy. We provide training in financial literacy, digitization,
+             strategic operations, capital access and market access, ensuring that businesses in 
+             agriculture, e-commerce, and green innovation grow resilient and competitive.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Jani AI Modal -->
+<div class="modal fade" id="janiModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Jani AI Kenya</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-style: italic;">Harnessing AI & Local Tech for a Greener Future.</p>
+        <p>Jani AI Kenya is an innovative program designed to tackle climate change by advancing technologies,
+             strategies, and public-private partnerships that reduce its impact. The program leverages accessible
+              local digital solutions from social media and WhatsApp to mobile applications and enriched data 
+              systems, making climate action smarter, more inclusive, and community-driven across Kenya and Africa.
+           &nbsp; &nbsp;The program also drives the Hatua Yetu, Future Yetu (Our Action, Our Future) 
+           campaign on social media, especially TikTok, to mobilize climate action and amplify 
+           grassroots voices.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Consultancy Modal -->
+<div class="modal fade" id="consultModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Consultancy Services</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-style: italic;">Innovative solutions, measurable results.</p>
+        <p>Radishare offers consultancy services in research, project design, communication strategy, 
+            digital marketing, and web development solutions. We partner with CBOs, MSMEs, and development 
+            organizations to co-create practical, evidence-based strategies that drive measurable impact. 
+            Our consultancy blends a deep understanding of realities with innovative digital approaches helping 
+            clients strengthen their visibility, expand their reach, and deliver sustainable results.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="section-title">Call To Action</h2>
+<div class="arrow-grid">
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=radishare00@gmail.com" target="_blank" class="arrow-box">
+    Join our CBO Mentorship Program
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=radishare00@gmail.com" target="_blank" class="arrow-box">
+    Become our Client under the MSME Empowerment Program 
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=radishare00@gmail.com" target="_blank" class="arrow-box">
+    Partner with EcoKinga Containers
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=radishare00@gmail.com" target="_blank" class="arrow-box">
+    Collaborate with an Existing Program
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=radishare00@gmail.com" target="_blank" class="arrow-box">
+    Co-Create Innovative Solutions with Radishare
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=radishare00@gmail.com" target="_blank" class="arrow-box">
+    Partner in Active Fundraising
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=radishare00@gmail.com" target="_blank" class="arrow-box">
+    Request our Services
+  </a>
+</div>
+
+<h2 class="section-title">Partners</h2>
+<div class="flag-row">
+    <!-- kenya -->
+    <div class="flag-box">
+        <img src="{% static 'images/gok.png' %}" class="flagship-img" alt="gok">
+    </div>
+
+    <!-- Moh-->
+    <div class="flag-box">
+        <img src="{% static 'images/mohd.jpg' %}" class="flagship-img" alt="moh">
+    </div>
+
+    <!-- gvrc -->
+    <div class="flag-box">
+        <img src="{% static 'images/gvrc.jpg' %}" class="flagship-img" alt="gvrc">
+    </div>
+
+    
+    <!-- madde md -->
+    <div class="flag-box">
+        <img src="{% static 'images/madde.jpg' %}" class="flagship-img" alt="madde md">
+    </div>
+    </div>
+    <div class="flag-row">
+        <!-- looku -->
+        <div class="flag-box">
+            <img src="{% static 'images/lookhub.jpg' %}" class="flagship-img" alt="looku">
+        </div>
+
+        <!-- jani -->
+        <div class="flag-box">
+            <img src="{% static 'images/jani.jpeg' %}" class="flagship-img" alt="jani ai">
+        </div>
+
+    </div>
+
+<footer style="background-color: #006b52; color: white; padding: 30px 40px;">
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; align-items: start;">
+
+    <!-- Column 1: Logo + Discover + Follow Us -->
+    <div>
+      <img src="{% static 'images/fav.jpeg' %}" alt="Radishare Logo" style="width: 100px; border-radius: 50%; display: block; margin-bottom: 10px;">
+      <h4 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: xx-large;  font-weight: bold; margin-bottom: 160px;">Radishare Kenya</h3>
+      
+      <img src="{% static 'images/cop.jpg' %}" class="tool-img" alt="corporate tools">
+    </div>
+
+    <!-- Column 2: Flagship Initiatives -->
+    <div>
+      <h4 style="color: #ffcc00; font-family: Georgia, 'Times New Roman', Times, serif; font-size: xx-large;  font-weight: bold;">DISCOVER</h4>
+      <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: large; margin-bottom: 120px;">
+        <li>- About us</li>
+        <li>- News & Publications</li>
+        <li>- Careers</li>
+        <li>- Madde MD LTD</li>
+        <li>- Staff Portal</li>
+      </ul>
+
+      <h4 style="color: #ffcc00;font-family: Georgia, 'Times New Roman', Times, serif; font-size: xx-large;  font-weight: bold;">FOLLOW US</h4>
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <a href="https://x.com/radishare?t=GG27Kwg6uUhu-_UTGYp69g&s=09" target="_blank">
+          <span class="fab fa-twitter" style="color: rgb(28,157,238); font-size: xx-large;"></span>
+        </a>
+        <a href="https://www.facebook.com/RadishareKenya" target="_blank">
+          <span class="fab fa-facebook" style="color: rgb(0,119,255); font-size: xx-large;"></span>
+        </a>
+        <a href="https://www.linkedin.com/company/radishare-kenya/" target="_blank">
+          <span class="fab fa-linkedin" style="color: rgb(28,157,238); font-size: xx-large;"></span>
+        </a>
+        <a href="https://www.instagram.com/radishare?igsh=Z2tqZGYwcTh4cHRw" target="_blank">
+          <span class="fab fa-instagram" style="color: rgb(209,60,60); font-size: xx-large;"></span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Column 3: LinkedIn Embed -->
+    <div>
+      <h4 style="color: #ffcc00; font-family: Georgia, 'Times New Roman', Times, serif; font-size: xx-large;  font-weight: bold;">FLAGSHIP INITIATIVES</h4>
+      <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: large;">
+        <li>- CBO Mentorship Program</li>
+        <li>- MSME Empowerment Program</li>
+        <li>- EcoKinga Containers</li>
+        <li>- Jani Al Kenya</li>
+        <li>- Consultancy Services</li>
+      </ul>
+      <div style="background: #555; border-radius: 20px; overflow: hidden; height: 400px;">
+        <iframe 
+          src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7372241853661827072" 
+          width="100%" 
+          height="400" 
+          style="border: none;" 
+          title="LinkedIn Post">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Column 4: TikTok Embed -->
+    <div>
+      <div style="background: #555; border-radius: 20px; overflow: hidden; height: 620px;">
+        <div style="width: 100%; height: 100%; overflow-y: auto; padding: 10px;">
+          <blockquote class="tiktok-embed" 
+            cite="https://www.tiktok.com/@radishare_ke/video/7547692730206391557" 
+            data-video-id="7547692730206391557" 
+            style="max-width: 100%; min-width: 100%;">
+            <section>
+              <a target="_blank" title="@radishare_ke" href="https://www.tiktok.com/@radishare_ke?refer=embed">@radishare_ke</a> 🚨 Introducing the 
+              <a title="radisharekenyapodcast" target="_blank" href="https://www.tiktok.com/tag/radisharekenyapodcast?refer=embed">#RadishareKenyaPodcast</a> 🎙️ 
+              Where real community stories meet the power of AI! 🤖✨ From CBOs to innovators and changemakers, we’re amplifying voices that matter across 🇰🇪 making storytelling sharper, faster, and more accessible than ever. Crisp. Engaging. Impactful. 
+              This isn’t just a podcast… it’s your front-row seat to Kenya’s ground-level change. 👉 Stay tuned — the future of Kenyan storytelling starts here. 
+              Radishare Kenya – Empower. Digitize. Deliver. 
+              <a title="radisharekenyapodcast" target="_blank" href="https://www.tiktok.com/tag/radisharekenyapodcast?refer=embed">#RadishareKenyaPodcast</a> 
+              <a title="digitalstorytelling" target="_blank" href="https://www.tiktok.com/tag/digitalstorytelling?refer=embed">#DigitalStorytelling</a> 
+              <a title="aipowered" target="_blank" href="https://www.tiktok.com/tag/aipowered?refer=embed">#AIPowered</a> 
+              <a title="cboimpact" target="_blank" href="https://www.tiktok.com/tag/cboimpact?refer=embed">#CBOImpact</a> 
+              <a target="_blank" title="♬ original sound - Radishare Kenya" href="https://www.tiktok.com/music/original-sound-7547692723622693638?refer=embed">♬ original sound - Radishare Kenya</a>
+            </section>
+          </blockquote>
+        </div>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Row -->
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 25px; font-size: 14px;">
+    <p>
+      <a href="{% url 'learning:privacy' %}" style="color: #ffcc00; text-decoration: none;">Privacy Policy</a> | 
+      <a href="{% url 'learning:disclaimer' %}" style="color: #ffcc00; text-decoration: none;">Disclaimer</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+{% endblock %}

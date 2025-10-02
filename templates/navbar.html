@@ -1,7 +1,8 @@
+
 {% load static %}
 <div class="navbar">
     <div class="logo">
-        <a class="navbar-brand" href="{% url 'learning:index' %}">
+        <a class="navbar-brand" href="{% url 'learning:corporate' %}">
             <img src="{% static 'images/radilogo.png' %}" class="img">
         </a>
     </div>
@@ -10,11 +11,14 @@
         <div class="dropdown">
             <a href="#" class="other-links">Learning</a>
             <div class="dropdown-content">
-                <a href="#" class="other-links">Website Based</a>
-                <a href="https://wa.me/254784515955" class="other-links">Whatsapp Based</a>
+                <a href="https://learning.radi-share.co.ke/" class="other-links" target="_blank">Website Based</a>
+                <a href="https://wa.me/254784515955" class="other-links" target="_blank">Whatsapp Based</a>
+                <a href="https://packaging.moodle.org/desktop/download.php?platform=android" class="other-links" target="_blank">Mobile App(Moodle)</a>
             </div>
+            
         </div>
         <a href="{% url 'learning:services' %}" class="other-links">What We Do</a>
+        <a href="{% url 'learning:index' %}" class="other-links">Corporate Tools</a>
         <div class="dropdownpricing">
             <a href="#" class="other-links">Pricing</a>
             <div class="dropdownpricing-content">
@@ -26,10 +30,17 @@
             </div>
         </div>
         <a href="{% url 'learning:partners' %}" class="other-links">Partnerships</a>
+        <a href="{% url 'learning:cbos' %}" class="other-links">Mentorship</a>
         <a href="{% url 'learning:jani' %}" class="other-links">Jani AI</a>
     </div>
-    <div class="auth-links">
+
+    <img src="{% static 'images/donate.png' %}" class="donate-img">
+    <!-- <div class="auth-links">
         <a href="#" class="home-link">Log In</a>
         <a href="#" class="login-link">Sign Up</a>
+    </div> -->
+    <!-- Hamburger Icon for Small Screens -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
     </div>
 </div>

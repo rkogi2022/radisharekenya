@@ -1,0 +1,261 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Radishare CBO{% endblock %}
+
+{% block content %}
+<style>
+    .card {
+    border: none;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 20px;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+h-100 {
+    height: 100%;
+}
+.col-md-6 {
+    margin-top: 15px;
+    font-size: 12px;
+}
+.cont {
+    margin-top: 130px;
+
+}
+h3 {
+    font-size: 1.75rem;  
+}
+
+h4 {
+    font-size: 1.25rem;  
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;  
+}
+ul {
+    list-style-type: none; 
+    margin-left: 0; 
+    padding-left: 0; 
+}
+
+
+</style>
+  <main>
+    <div class="mx-[15%] mt-20 mb-20 p-15">
+        <h2 class="elementor-heading-title elementor-size-default text-center text-5xl font-extrabold text-gray-800 mb-8">
+          <strong data-start="0" data-end="54">CBO Mentorship Program by Radishare Kenya</strong>
+        </h2>
+        <p class="text-gray-600 text-base leading-relaxed" style="font-size: 20px;">
+            Radishare Kenya, with support from donors, fundraising, and internal revenue, launched a <b>CBO Mentorship Program</b> to strengthen Community-Based Organizations (CBOs) across Kenya.
+          </p>
+    </div>
+    <div class="container-fluid px-4">
+        <div class="row">
+            <!-- Card 1: What We Do -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card bg-primary text-white h-100">
+                    <div class="card-body d-flex flex-column justify-between">
+                        <h3 class="text-center">What We Do</h3>
+                        <p class="text-center">
+                            Building on our mentorship model from Kaloleni Young Mothers (KYM) CBO, we provide structured guidance to CBO founders and leaders. To demonstrate impact, we mentor Ten CBOs at a time for free over a three-month period before scaling through additional funding.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Who Can Join -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card bg-warning text-white h-100">
+                    <div class="card-body d-flex flex-column justify-between">
+                        <h3 class="text-center">Who Can Join</h3>
+                        <p class="text-center">
+                            CBO founders and leaders seeking tailored mentorship in governance, financial management, resource mobilization, digital transformation, and community engagement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Program Timeline -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card bg-success text-white h-100">
+                    <div class="card-body d-flex flex-column justify-between">
+                        <h3 class="text-center">Program Timeline</h3>
+                        <p class="text-center">
+                            <strong>January 2025:</strong> Pilot mentorship with KYM CBO.<br>
+                            <strong>First Cohort (Jan–Mar 2025):</strong> 5 CBOs onboarded.<br>
+                            <strong>April 2025 & Beyond:</strong> Expanding to 10 CBOs per quarter.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-4">
+        <div class="row">
+            <!-- Left: Text Content -->
+            <div class="col-md-6 cont">
+                <h3>How We Deliver Mentorship</h3>
+                <p>The program is fully digital, using platforms like WhatsApp, web-based content, and Zoom for interactive learning. A Special Expert Session will also be scheduled to improve the quality of the mentorship program with key experts in various fields.</p>
+                <h4>Program Expectations</h4>
+                <ul>
+                    <li>All CBOs are expected to participate fully and commit to the program for a duration of 3 months.</li>
+                    <li>CBOs are encouraged to identify a Champion for each module from her members.</li>
+                    <li>CBOs are encouraged to all participate in the common class involving all other CBOs.</li>
+                    <li>CBO members are encouraged to utilize the web course provided on Radishare website to learn and unlearn.</li>
+                    <li>All CBOs are encouraged to pin a featured post on CBO mentorship by Radishare.</li>
+                    <li>All CBOs are encouraged to feature a page about Radishare on their website.</li>
+                </ul>
+            </div>
+    
+            <!-- Right: Image -->
+            <div class="col-md-6">
+                <img src="{% static 'images/cbo.jpg' %}" alt="Mentorship Program" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card bg-warning text-white h-100">
+                <div class="card-body d-flex flex-column justify-between">
+                    <h3 class="text-center">Why This Matters</h3>
+                    <p class="text-center">CBOs in Kenya face challenges such as:</p>
+                        <ul>
+                            <li>✅ Financial Constraints: Limited funding & poor financial management.</li>
+                            <li>✅ Weak Structures: Lack of governance & strategic planning.</li>
+                            <li>✅ Capacity Gaps: Limited fundraising, project management & digital skills.</li>
+                            <li>✅ Community Engagement Issues: Difficulty mobilizing support & maintaining transparency.</li>
+                            <li>✅ Legal & Compliance Barriers: Complex registration & tax obligations.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-success text-white h-100">
+                <div class="card-body d-flex flex-column justify-between">
+                    <h3 class="text-center">Key Focus Areas</h3>
+                    <p class="text-center">We equip CBOs with skills in:</p>
+                        <ul>
+                            <li>✅ Organizational Development – Leadership, governance & legal compliance.</li>
+                            <li>✅ Financial Management – Budgeting, fundraising & sustainability strategies.</li>
+                            <li>✅ Impact Measurement – M&E frameworks & data-driven decision-making.</li>
+                            <li>✅ Resource Mobilization – Proposal writing & strategic partnerships.</li>
+                            <li>✅ Digital Transformation – Social media, online fundraising & tech integration.</li>
+                            <li>✅ Community Engagement – Advocacy, grassroots mobilization & inclusivity.</li>
+                            <li>✅ Operational Efficiency – Risk management & process optimization.</li>
+                        </ul>
+                        <p>This program empowers CBOs to scale impact, improve sustainability, and drive meaningful change in communities across Kenya.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 px-3">
+        <div class="card bg-success text-white h-100 p-1 mt-4 mb-4">
+            <div class="card-body d-flex flex-column justify-content-between">
+                <h3 class="text-center">Get Started Today!</h3>
+                <p class="text-center">
+                    👉 Option 1: If your CBO is interested in our mentorship program, please fill out the 
+                    <a href="https://forms.gle/tDQNgVmDG78iAs32A" target="_blank" class="text-blue text-decoration-underline">Capacity Assessment Form</a>
+                </p>
+                <p class="text-center">
+                    👉 Option 2: Explore more free mentorship courses at 
+                    <a href="https://learning.radi-share.co.ke/" target="_blank" class="text-blue text-decoration-underline">Radishare E-Learning Platform</a>
+                </p>
+                <p class="text-center">Whichever option you choose, it’s a win for your CBO! 🚀</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-4">
+        <div class="row">
+            <!-- Card 1: What We Do -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card bg-primary text-white h-100">
+                    <div class="card-body d-flex flex-column justify-between">
+                        <h3 class="text-center">Connect With Us – Annual Voluntary CBO Membership</h3>
+                        <p class="text-center"></p><p>We invite Community-Based Organizations (CBOs) that have successfully completed our mentorship program to become part of our exclusive Radishare Kenya Membership Network.</p>
+                        <h3 class="text-center">Ready to join?</h3>
+                        <h4 class="text-center">📩 Contact Us:</h4>
+                        <p class="text-center">
+                            <strong><p>📧 Email:</strong> <a href="mailto:radishare00@gmail.com">radishare00@gmail.com</a><br> (and cc <a href="mailto:directorsoffice@maddemd.co.ke">directorsoffice@maddemd.co.ke</a>)</p>
+                                <br>
+                            <strong>🌐 Website: </strong> <a href="https://www.radi-share.co.ke" target="_blank">www.radi-share.co.ke</a><br>
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Who Can Join -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card bg-warning text-white h-100">
+                    <div class="card-body d-flex flex-column justify-between">
+                        <p class="text-center">By joining, your CBO will connect with like-minded organizations, fostering collaboration, knowledge-sharing, and growth. As a member, you’ll gain access to:</p>
+                        <p class="text-center">
+                            <ul>
+                                <li>✅ Funding opportunities and calls for proposals</li>
+                                <li>✅ Grant and proposal writing assistance from the Radishare Kenya Team</li>
+                                <li>✅ Capacity-building workshops and training sessions</li>
+                                <li>✅ Networking events with other CBOs and key stakeholders</li>
+                                <li>✅ Advocacy and policy support to amplify your impact</li>
+                                <li>✅ Visibility and recognition for your initiatives</li>
+                                <li>✅ Staff and Email Professional Portal</li>
+                                <li>✅ Website Management</li>
+                                <li>✅ Social Media Management support & advisory</li>
+                            </ul>
+                        </p>
+                        <p>To join the network, each CBO will choose a benefits package with an annual membership fee ranging from <b>Ksh. 1,500</b> to <b>Ksh. 5,000</b>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Program Timeline -->
+            <div class="col-xl-4 col-md-6 mb-4">
+                <div class="card bg-success text-white h-100">
+                    <div class="card-body d-flex flex-column justify-between">
+                        <blockquote class="tiktok-embed" 
+                        cite="https://www.tiktok.com/@radishare_ke/video/7493086048071732485" 
+                        data-video-id="7493086048071732485" style="max-width: 605px;min-width: 325px;" > 
+                        <section> <a target="_blank" title="@radishare_ke" 
+                            href="https://www.tiktok.com/@radishare_ke?refer=embed">@radishare_ke</a> 
+                            This is a short video to guide you on how to create an account on the 
+                            Radishare learning platform! www.radi-share.co.ke 
+                            <a title="now" target="_blank" href="https://www.tiktok.com/tag/now?refer=embed">#now</a> 
+                            <a title="radishare" target="_blank" href="https://www.tiktok.com/tag/radishare?refer=embed">
+                                #radishare</a> <a title="cbo" target="_blank" href="https://www.tiktok.com/tag/cbo?refer=embed">
+                                    #CBO</a> <a title="mentorshipprogram" target="_blank" 
+                                    href="https://www.tiktok.com/tag/mentorshipprogram?refer=embed">
+                                    #mentorshipprogram</a> <a title="kenyantiktok🇰🇪" target="_blank" 
+                                    href="https://www.tiktok.com/tag/kenyantiktok%F0%9F%87%B0%F0%9F%87%AA?refer=embed">
+                                    #kenyantiktok🇰🇪</a> <a target="_blank" title="♬ original sound - Radishare Kenya" 
+                                    href="https://www.tiktok.com/music/original-sound-7493086113196706615?refer=embed">
+                                    ♬ original sound - Radishare Kenya</a> </section> </blockquote> 
+                                    <script async src="https://www.tiktok.com/embed.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+
+{% endblock %}
